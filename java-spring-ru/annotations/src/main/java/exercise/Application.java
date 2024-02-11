@@ -13,13 +13,15 @@ public class Application {
         for (Method method : Address.class.getDeclaredMethods()) {
             {
                 if (method.isAnnotationPresent(Inspect.class)) {
-                    try {
-                        // Выполняем метод с аннотацией LogExecutionTime
-                        method.invoke(service);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println("Method: " + method.getName() + " returns a value of type " + method.getReturnType());
+//                    try {
+//                        // Выполняем метод с аннотацией LogExecutionTime
+//                        method.invoke(address);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+                    System.out.println("Method " + method.getName() + " returns a value of type " + method.getReturnType().getSimpleName());
+
+
                 }
             }
             // END
